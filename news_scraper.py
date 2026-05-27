@@ -21,6 +21,8 @@ for a in articles:
     data.append({"headline": headline, "date": date})
 
 df = pd.DataFrame(data)
+df['date'] = pd.to_datetime(df['date'], format = 'mixed')
+df['date'] = df['date'].dt.date
 df.to_csv("news_data.csv", index = False)
 print(df.head())
 
