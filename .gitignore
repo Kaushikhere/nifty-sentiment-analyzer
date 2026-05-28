@@ -1,3 +1,5 @@
 venv/
 *.bin
 *.dylib
+*.dylib
+lib/
